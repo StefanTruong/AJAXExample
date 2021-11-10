@@ -1,0 +1,15 @@
+.button {
+    background-color: aquamarine;
+    font-size: large;
+    opacity: 0.5;
+    width: 100px;
+    height: 100px;
+}
+
+.buttonChanged {
+    background-color:darkolivegreen;
+    font-size: large;
+    opacity: 0.5;
+    width: 100px;
+    height: 100px;
+}
