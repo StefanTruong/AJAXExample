@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
     const button = document.querySelector('button')
-
     button.addEventListener('click', ()=> {
         setTimeout(() => button.classList.toggle('buttonChanged'), 1000)    // Using two Callback to change color of the button. Doing unneccessary stuff
-        button.value = 'There you are'
+        button.value = 'There you are'  // funktioniert nicht
     })
-
+    
 })
 
     function showCountries() {
@@ -18,10 +17,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 console.log('You Got a HTTP Status Code 200')
                 let countriesJSONlist = JSON.parse(this.response)   // Responseobject is actually a JSON file
                 countriesJSONlist.forEach(country => { 
-                    const singleCountry = document.createElement('div')
-                    singleCountry.innerHTML = country.name
-                    console.log(singleCountry)
-                    document.getElementById('listDiv').appendChild(singleCountry)
+                    const singleCountryDiv = document.createElement('div')
+                    singleCountryDiv.innerHTML = country.name.common
+                    console.log(singleCountryDiv.innerHTML)
+                    document.getElementById('listDiv').appendChild(singleCountryDiv)
                 })
             }    
         }
